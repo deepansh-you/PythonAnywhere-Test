@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Greet</title>
+</head>
+<body>
+    <h1>This is our homepage!</h1>
+    <img src="{{url_for('static', filename='img/bb.jpg')}}" alt="" width="500px" height="300px">
+    {%if name%}
+        <h3>Hello {{name}}</h3>
+    {%else%}
+        <h3>Hello World!</h3>
+    {%endif%}
+
+    <form action="/users" method="POST">
+        <label for="fname">First Name : </label>
+        <input type="text" id="fname" name="fname">
+        <br>
+        <label for="lname">Last Name : </label>
+        <input type="text" id="lname" name='lname'>
+        <br>
+        <input type="submit">
+    </form>
+
+</body>
+</html>
